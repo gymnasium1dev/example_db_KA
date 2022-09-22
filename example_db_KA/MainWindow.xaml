@@ -8,5 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <Button x:Name="addTipes" Click="GetTipes_Click" Content="Click"></Button>
+        <Button x:Name="PrintTypes" Click="PrintTypes_Click" Content="click"></Button>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="TypeTitle"></TextBox>
+            <Button x:Name="addType" Content="addType" Click="addType_Click"></Button>
+        </StackPanel>
     </StackPanel>
 </Window>

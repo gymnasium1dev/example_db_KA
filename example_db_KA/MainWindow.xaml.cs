@@ -31,7 +31,26 @@ namespace example_db_KA
         {
             List <userTipes> tipeslist = db.userTipes.ToList();
             Console.WriteLine(tipeslist.Count);
-            Console.WriteLine(Title[]);
+            
+        }
+
+        private void PrintTypes_Click(object sender, RoutedEventArgs e)
+        {
+            var allTypes = db.userTipes;
+            foreach(var element in allTypes)
+            {
+                Console.WriteLine(element.title);
+                Console.WriteLine($"id: {element.id} Type:{element.title}");
+            }
+        }
+
+        private void addType_Click(object sender, RoutedEventArgs e)
+        {
+            string title = TypeTitle.Text;
+            userTipes userType = new userTipes();
+            userType.title = title;
+            db.userTipes.Add(userType);
+            db.SaveChanges();
         }
     }
 }
