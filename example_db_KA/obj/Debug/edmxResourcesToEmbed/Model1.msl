@@ -4,6 +4,7 @@
     <EntitySetMapping Name="userRools">
       <EntityTypeMapping TypeName="exampleModel.userRools">
         <MappingFragment StoreEntitySet="userRools">
+          <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

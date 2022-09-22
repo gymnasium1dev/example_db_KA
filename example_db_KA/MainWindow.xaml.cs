@@ -52,5 +52,44 @@ namespace example_db_KA
             db.userTipes.Add(userType);
             db.SaveChanges();
         }
+
+        private void rools_Click(object sender, RoutedEventArgs e)
+        {
+            userRools userRool = new userRools();
+            userRool.title = "fhgh";
+
+            db.userRools.Add(userRool);
+            db.SaveChanges();
+        }
+
+        private void allRools_Click(object sender, RoutedEventArgs e)
+        {
+            var allRools = db.userRools;
+            foreach(var element1 in allRools)
+            {
+                Console.WriteLine(element1.title);
+            }
+        }
+
+        private void addnewUser_Click(object sender, RoutedEventArgs e)
+        {
+            users user = new users();
+
+            user.userName = userName.Text;
+            user.tipe_id = 1;
+            user.rools_id = 1;
+            user.userRools = db.userRools.ToList()[0];
+            db.users.Add(user);
+            db.SaveChanges();
+        }
+
+        private void printUsers_Click(object sender, RoutedEventArgs e)
+        {
+            List<users> users = db.users.ToList();
+            foreach(var element in users)
+            {
+                Console.WriteLine($"username: {element.userName} usertype: {element.tipe_id}");
+            }
+        }
     }
 }

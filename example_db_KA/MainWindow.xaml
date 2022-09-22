@@ -9,9 +9,16 @@
     <StackPanel>
         <Button x:Name="addTipes" Click="GetTipes_Click" Content="Click"></Button>
         <Button x:Name="PrintTypes" Click="PrintTypes_Click" Content="click"></Button>
+        <Button x:Name="rools" Content="fnfd" Click="rools_Click"></Button>
+        <Button x:Name="allRools" Content="Показать" Click="allRools_Click"></Button>
         <StackPanel Orientation="Horizontal">
             <TextBox x:Name="TypeTitle"></TextBox>
             <Button x:Name="addType" Content="addType" Click="addType_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="userName" Width="200"></TextBox>
+            <Button x:Name="addnewUser" Content="addnewUser" Click="addnewUser_Click"></Button>
+            <Button x:Name="printUsers" Content="printUsers" Click="printUsers_Click"></Button>
         </StackPanel>
     </StackPanel>
 </Window>

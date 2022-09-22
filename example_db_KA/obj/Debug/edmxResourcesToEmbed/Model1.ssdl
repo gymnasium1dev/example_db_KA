@@ -4,6 +4,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
+    <Property Name="title" Type="varchar" MaxLength="50" />
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="users">
