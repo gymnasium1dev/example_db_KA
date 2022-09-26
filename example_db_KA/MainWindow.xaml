@@ -20,5 +20,16 @@
             <Button x:Name="addnewUser" Content="addnewUser" Click="addnewUser_Click"></Button>
             <Button x:Name="printUsers" Content="printUsers" Click="printUsers_Click"></Button>
         </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <Label x:Name="UserRool"></Label>
+            <Button x:Name="GetRool" Height="50" Width="100" Click="GetRool_Click" Content="getRool"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <Label x:Name="Types" Content="Types"></Label>
+            <Button x:Name="GetTypes" Content="GetTypes" Click="GetTypes_Click"></Button>
+        </StackPanel>
+        <StackPanel >
+            <Button x:Name="GetUsersByType" Content="GetUsersByType" Click="GetUsersByType_Click"></Button>
+        </StackPanel>
     </StackPanel>
 </Window>

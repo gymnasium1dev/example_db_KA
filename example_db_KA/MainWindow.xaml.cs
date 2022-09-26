@@ -91,5 +91,44 @@ namespace example_db_KA
                 Console.WriteLine($"username: {element.userName} usertype: {element.tipe_id}");
             }
         }
+
+        private void GetRool_Click(object sender, RoutedEventArgs e)
+        {
+            users user = db.users.First();
+           
+            userRools rool = db.userRools.Where((element) => element.id == user.rools_id).First();
+            UserRool.Content = $"{user.userName} {rool.title}";
+
+        }
+
+        private void GetTypes_Click(object sender, RoutedEventArgs e)
+        {
+            users first = db.users.First();
+            List<userTipes> x = db.userTipes.ToList();
+
+
+            for (int i = 0; i<x.Count; i++)
+            {
+                if (first.tipe_id == x[i].id)
+                {
+                    Types.Content = $"{first.userName} {x[i].title}";
+                }
+            }
+            
+        }
+
+        private void GetUsersByType_Click(object sender, RoutedEventArgs e)
+        {
+            userTipes type = db.userTipes.First();
+            List<users> a = db.users.ToList();
+            for (int i = 0; i<a.Count;i++ )
+            {
+                if (a[i].tipe_id == type.id)
+                {
+                    Console.WriteLine($"Type:{type.title} users:{a[i].userName}");
+
+                }
+            }
+        }
     }
 }
